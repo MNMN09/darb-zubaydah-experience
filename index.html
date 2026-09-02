@@ -80,11 +80,20 @@
       </p>
 
       <div class="scroll">
-        ↓ ابدأ الرحلة
-      </div>
+<button onclick="startJourney()">↓ ابدأ الرحلة</button>      </div>
 
     </div>
   </main>
+<script>
+function startJourney() {
+  document.body.style.transition = "opacity 1s ease";
+  document.body.style.opacity = "0";
 
+  setTimeout(() => {
+    document.body.style.opacity = "1";
+    alert("رحلتنا عبر درب زبيدة تبدأ الآن ✨");
+  }, 1000);
+}
+</script>
 </body>
 </html>
