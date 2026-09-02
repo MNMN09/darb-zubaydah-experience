@@ -118,3 +118,1083 @@ section{
     font-weight:700;
     text-shadow:0 0 50px rgba(214,173,98,.15);
 }
+
+.subtitle{
+    margin:28px auto;
+    max-width:700px;
+    color:#cfc4b5;
+    line-height:2;
+    font-size:18px;
+}
+
+.start-btn{
+    margin-top:30px;
+    padding:17px 42px;
+    border:1px solid var(--gold);
+    background:rgba(214,173,98,.08);
+    color:#fff;
+    border-radius:50px;
+    font-family:'Cairo';
+    font-size:16px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.start-btn:hover{
+    background:var(--gold);
+    color:#111;
+    transform:translateY(-4px);
+    box-shadow:0 15px 40px rgba(214,173,98,.2);
+}
+
+.scroll-hint{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#8d8274;
+    font-size:12px;
+}
+
+.scroll-hint span{
+    display:block;
+    font-size:22px;
+    animation:bounce 1.7s infinite;
+}
+
+@keyframes bounce{
+    50%{transform:translateY(10px)}
+}
+
+/* =========================
+   JOURNEY
+========================= */
+
+#journey{
+    background:
+        linear-gradient(180deg,#080706,#15100b,#080706);
+    display:flex;
+    align-items:center;
+}
+
+.route-bg{
+    position:absolute;
+    inset:0;
+    opacity:.35;
+}
+
+.route-line{
+    position:absolute;
+    width:80%;
+    height:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    top:50%;
+    right:10%;
+    transform:rotate(-7deg);
+    box-shadow:0 0 25px rgba(214,173,98,.4);
+}
+
+.route-dot{
+    position:absolute;
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 25px var(--gold);
+}
+
+.dot1{right:15%;top:46%}
+.dot2{right:38%;top:51%}
+.dot3{right:61%;top:42%}
+.dot4{right:83%;top:48%}
+
+.journey-content{
+    max-width:850px;
+}
+
+.journey-title{
+    font-family:'Playfair Display','Cairo';
+    font-size:clamp(40px,6vw,80px);
+    margin-bottom:25px;
+}
+
+.journey-text{
+    color:#c7bcae;
+    font-size:18px;
+    line-height:2.2;
+    max-width:800px;
+}
+
+.fact-row{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:45px;
+}
+
+.fact{
+    border:1px solid rgba(214,173,98,.3);
+    background:rgba(255,255,255,.025);
+    padding:20px 25px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}
+
+.fact strong{
+    display:block;
+    color:var(--gold-light);
+    font-size:25px;
+}
+
+/* =========================
+   PONDS
+========================= */
+
+.pond-section{
+    display:flex;
+    align-items:center;
+    background:#090806;
+}
+
+.pond-section:nth-child(even){
+    background:#0e0b08;
+}
+
+.pond-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.pond-image-wrap{
+    perspective:1200px;
+}
+
+.pond-card{
+    position:relative;
+    border-radius:25px;
+    overflow:hidden;
+    transform:rotateY(-5deg) rotateX(2deg);
+    transition:transform .8s ease;
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.7),
+        0 0 50px rgba(214,173,98,.08);
+}
+
+.pond-card:hover{
+    transform:rotateY(0) rotateX(0) scale(1.025);
+}
+
+.pond-card img{
+    width:100%;
+    height:560px;
+    object-fit:cover;
+    display:block;
+    transition:transform 1.2s ease;
+}
+
+.pond-card:hover img{
+    transform:scale(1.07);
+}
+
+.image-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(180deg,transparent 45%,rgba(0,0,0,.8));
+}
+
+.image-label{
+    position:absolute;
+    bottom:22px;
+    right:25px;
+    color:#fff;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+.pond-info{
+    opacity:0;
+    transform:translateY(35px);
+    transition:1s ease;
+}
+
+.pond-info.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.pond-number{
+    font-family:'Playfair Display';
+    color:rgba(214,173,98,.3);
+    font-size:80px;
+    line-height:.8;
+    margin-bottom:20px;
+}
+
+.pond-title{
+    font-family:'Playfair Display','Cairo';
+    font-size:clamp(35px,5vw,65px);
+    color:#f3e8d7;
+    margin-bottom:25px;
+}
+
+.pond-description{
+    color:#c7bcae;
+    line-height:2.1;
+    font-size:17px;
+}
+
+.highlight-box{
+    margin-top:30px;
+    border-right:3px solid var(--gold);
+    padding:15px 20px;
+    background:rgba(214,173,98,.05);
+    color:#ddd0bf;
+    line-height:2;
+}
+
+.next-btn{
+    display:inline-block;
+    margin-top:35px;
+    border:1px solid rgba(214,173,98,.5);
+    color:var(--gold-light);
+    padding:12px 28px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.next-btn:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+/* =========================
+   OVERVIEW
+========================= */
+
+#overview{
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(circle at 20% 50%,rgba(214,173,98,.08),transparent 35%),
+        #080706;
+}
+
+.overview-content{
+    text-align:center;
+}
+
+.overview-title{
+    font-family:'Playfair Display','Cairo';
+    font-size:clamp(40px,7vw,90px);
+    margin-bottom:25px;
+}
+
+.overview-text{
+    max-width:850px;
+    margin:auto;
+    color:#c7bcae;
+    line-height:2.2;
+    font-size:18px;
+}
+
+.pond-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:55px;
+}
+
+.mini-card{
+    padding:30px;
+    border:1px solid rgba(214,173,98,.2);
+    background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+    border-radius:20px;
+    transition:.5s;
+}
+
+.mini-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(214,173,98,.6);
+}
+
+.mini-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.mini-card h3{
+    color:var(--gold-light);
+    margin-bottom:10px;
+}
+
+.mini-card p{
+    color:#a99d8d;
+    font-size:14px;
+    line-height:1.9;
+}
+
+/* =========================
+   END
+========================= */
+
+#ending{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+        radial-gradient(circle at center,rgba(214,173,98,.12),transparent 35%),
+        #050403;
+}
+
+.end-title{
+    font-family:'Playfair Display','Cairo';
+    font-size:clamp(45px,8vw,100px);
+    margin-bottom:25px;
+}
+
+.end-text{
+    color:#b9ad9c;
+    max-width:700px;
+    margin:auto;
+    line-height:2.2;
+    font-size:17px;
+}
+
+.end-line{
+    width:100px;
+    height:1px;
+    background:var(--gold);
+    margin:35px auto;
+}
+
+.credit{
+    color:#766b5d;
+    font-size:12px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.side-nav{
+    position:fixed;
+    left:25px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:100;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.nav-dot{
+    width:9px;
+    height:9px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.nav-dot.active{
+    background:var(--gold);
+    box-shadow:0 0 15px var(--gold);
+    transform:scale(1.5);
+}
+
+.progress{
+    position:fixed;
+    top:0;
+    right:0;
+    height:3px;
+    background:var(--gold);
+    width:0;
+    z-index:200;
+    box-shadow:0 0 10px var(--gold);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    .pond-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .pond-card img{
+        height:390px;
+    }
+
+    .pond-number{
+        font-size:60px;
+    }
+
+    .pond-cards{
+        grid-template-columns:1fr;
+    }
+
+    .side-nav{
+        left:12px;
+    }
+
+    .route-line{
+        width:100%;
+        right:0;
+    }
+
+    .subtitle,
+    .journey-text,
+    .overview-text{
+        font-size:15px;
+    }
+}
+
+/* =========================
+   CINEMATIC TRANSITION
+========================= */
+
+.cinematic-cover{
+    position:fixed;
+    inset:0;
+    background:#050403;
+    z-index:999;
+    pointer-events:none;
+    opacity:1;
+    animation:coverOut 2s ease forwards;
+}
+
+@keyframes coverOut{
+    to{opacity:0}
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1.2s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<div class="cinematic-cover"></div>
+
+<div class="progress" id="progress"></div>
+
+<!-- NAV -->
+<div class="side-nav">
+    <div class="nav-dot active" onclick="goTo('intro')"></div>
+    <div class="nav-dot" onclick="goTo('journey')"></div>
+    <div class="nav-dot" onclick="goTo('ashar')"></div>
+    <div class="nav-dot" onclick="goTo('zabala')"></div>
+    <div class="nav-dot" onclick="goTo('jumaimah')"></div>
+    <div class="nav-dot" onclick="goTo('overview')"></div>
+    <div class="nav-dot" onclick="goTo('ending')"></div>
+</div>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section id="intro">
+
+    <div class="intro-content container">
+
+        <div class="eyebrow">
+            رحلة عبر الزمن
+        </div>
+
+        <h1 class="main-title">
+            درب زبيدة
+        </h1>
+
+        <p class="subtitle">
+            طريقٌ عبر الصحراء،
+            حمل القوافل والمسافرين،
+            وحفظت محطاته قصة الماء والسفر والهندسة والحضارة.
+        </p>
+
+        <button class="start-btn" onclick="startJourney()">
+            ↓ &nbsp; ابدأ الرحلة
+        </button>
+
+    </div>
+
+    <div class="scroll-hint">
+        اسحب للأسفل
+        <span>↓</span>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JOURNEY
+========================= -->
+
+<section id="journey">
+
+    <div class="route-bg">
+
+        <div class="route-line"></div>
+
+        <div class="route-dot dot1"></div>
+        <div class="route-dot dot2"></div>
+        <div class="route-dot dot3"></div>
+        <div class="route-dot dot4"></div>
+
+    </div>
+
+    <div class="container journey-content reveal">
+
+        <div class="small-title">
+            THE JOURNEY
+        </div>
+
+        <h2 class="journey-title">
+            عندما كان <span class="gold">الماء</span> هو سر الرحلة
+        </h2>
+
+        <p class="journey-text">
+            لم يكن درب زبيدة مجرد طريق تعبره القوافل،
+            بل كان منظومة متكاملة من المحطات والآبار والبرك
+            والمنشآت التي صُممت لخدمة المسافرين والقوافل
+            في قلب البيئة الصحراوية.
+        </p>
+
+        <div class="fact-row">
+
+            <div class="fact">
+                <strong>الماء</strong>
+                أساس استمرار الرحلة
+            </div>
+
+            <div class="fact">
+                <strong>البرك</strong>
+                محطات للحياة والاستقرار
+            </div>
+
+            <div class="fact">
+                <strong>الهندسة</strong>
+                حلول مبتكرة للبيئة الصحراوية
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AL ASHAR
+========================= -->
+
+<section id="ashar" class="pond-section">
+
+    <div class="container pond-grid">
+
+        <div class="pond-image-wrap reveal">
+
+            <div class="pond-card">
+
+                <img
+                src="./photo_5818811556957983523_y.jpg"
+                alt="بركة العشار">
+
+                <div class="image-overlay"></div>
+
+                <div class="image-label">
+                    بركة العشار
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="pond-info reveal">
+
+            <div class="pond-number">
+                01
+            </div>
+
+            <div class="small-title">
+                محطة مائية كبرى
+            </div>
+
+            <h2 class="pond-title">
+                بركة العشار
+            </h2>
+
+            <p class="pond-description">
+                تتميز بركة العشار بمساحتها السطحية الكبيرة
+                وقدرتها الاستيعابية الضخمة للمياه، حيث صُممت
+                لتكفي قوافل ضخمة جداً في وقت واحد.
+            </p>
+
+            <div class="highlight-box">
+                <strong class="gold">الهندسة الدقيقة</strong><br>
+                لا تقتصر البركة على كونها حفرة لتجميع الماء،
+                بل تمثل مجمعاً مائياً متكاملاً يتكون من
+                بركة رئيسية ضخمة، وأحياناً بركة مصفاة أصغر
+                لتنقية المياه قبل دخولها إلى البركة الكبرى،
+                إضافة إلى مدرجات مرصوفة بعناية لتسهيل وصول
+                الإنسان والحيوان إلى الماء دون تلويثه.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ZABALA
+========================= -->
+
+<section id="zabala" class="pond-section">
+
+    <div class="container pond-grid">
+
+        <div class="pond-info reveal">
+
+            <div class="pond-number">
+                02
+            </div>
+
+            <div class="small-title">
+                المحطة المتكاملة
+            </div>
+
+            <h2 class="pond-title">
+                مجمع برك زبالا
+            </h2>
+
+            <p class="pond-description">
+                تُجسد هذه الصورة مجمع برك زبالا التاريخي.
+                لا تظهر هنا بركة واحدة، بل مجمع مائي متكامل
+                مرصوف بالحجارة القوية، يضم بركة مربعة ضخمة
+                وأخرى مستطيلة.
+            </p>
+
+            <div class="highlight-box">
+                يتصل المجمع بنظام قنوات أرضية لجلب المياه
+                من الأودية المجاورة وتوزيعها.
+                ويبين هذا النموذج كيف كانت المحطات الكبرى
+                تعمل كمراكز حضرية مصغرة، تجمع بين توفير
+                المياه وخدمة القوافل وتنظيم الحركة حول المحطة.
+            </div>
+
+        </div>
+
+        <div class="pond-image-wrap reveal">
+
+            <div class="pond-card">
+
+                <img
+                src="./photo_5818811556957983524_y.jpg"
+                alt="مجمع برك زبالا">
+
+                <div class="image-overlay"></div>
+
+                <div class="image-label">
+                    مجمع برك زبالا
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JUMAYMAH
+========================= -->
+
+<section id="jumaimah" class="pond-section">
+
+    <div class="container pond-grid">
+
+        <div class="pond-image-wrap reveal">
+
+            <div class="pond-card">
+
+                <img
+                src="./photo_5818811556957983527_y.jpg"
+                alt="بركة الجميمة">
+
+                <div class="image-overlay"></div>
+
+                <div class="image-label">
+                    بركة الجميمة
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="pond-info reveal">
+
+            <div class="pond-number">
+                03
+            </div>
+
+            <div class="small-title">
+                التصميم المربع والمصفاة
+            </div>
+
+            <h2 class="pond-title">
+                بركة الجميمة
+            </h2>
+
+            <p class="pond-description">
+                نرى هنا نموذجاً مختلفاً من المنشآت المائية:
+                بركة الجميمة، التي تتميز بتصميمها المربع
+                وتنظيمها الهندسي الدقيق.
+            </p>
+
+            <div class="highlight-box">
+                <strong class="gold">المصفاة والبركة الرئيسية</strong><br>
+                يظهر في التصميم الجدار الفاصل بين المصفاة
+                التي تُجمع فيها الرواسب، والبركة الرئيسية
+                الكبرى التي تليها.
+                ويعكس هذا التنظيم فكرة هندسية تهدف إلى
+                تحسين جودة المياه قبل وصولها إلى الحوض الرئيسي.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OVERVIEW
+========================= -->
+
+<section id="overview">
+
+    <div class="container overview-content reveal">
+
+        <div class="small-title">
+            WATER SYSTEM
+        </div>
+
+        <h2 class="overview-title">
+            <span class="gold">البرك</span> ليست مجرد ماء
+        </h2>
+
+        <p class="overview-text">
+            تكشف برك درب زبيدة عن معرفة دقيقة بالبيئة
+            الصحراوية واحتياجات القوافل.
+            فقد ارتبط تصميم المحطات بتوفير الماء،
+            وتنظيم الوصول إليه، والحفاظ عليه،
+            وتحويل المحطات إلى نقاط استقرار واستراحة
+            على امتداد الطريق.
+        </p>
+
+        <div class="pond-cards">
+
+            <div class="mini-card">
+
+                <div class="mini-icon">◈</div>
+
+                <h3>
+                    جمع المياه
+                </h3>
+
+                <p>
+                    الاستفادة من مياه الأمطار والسيول
+                    وتوجيهها نحو المنشآت المائية.
+                </p>
+
+            </div>
+
+            <div class="mini-card">
+
+                <div class="mini-icon">◇</div>
+
+                <h3>
+                    تنقية المياه
+                </h3>
+
+                <p>
+                    استخدام المراحل والفواصل والمصافي
+                    للمساعدة في الحفاظ على جودة المياه.
+                </p>
+
+            </div>
+
+            <div class="mini-card">
+
+                <div class="mini-icon">✦</div>
+
+                <h3>
+                    خدمة القوافل
+                </h3>
+
+                <p>
+                    توفير نقطة أساسية للراحة والتزود بالماء
+                    خلال الرحلات الطويلة.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section id="ending">
+
+    <div class="container reveal">
+
+        <div class="small-title">
+            THE END OF THE JOURNEY
+        </div>
+
+        <h2 class="end-title">
+            ويبقى <span class="gold">أثر الماء</span>
+        </h2>
+
+        <div class="end-line"></div>
+
+        <p class="end-text">
+            من خلال البرك والمحطات والمنشآت التي بقيت آثارها
+            شاهدة حتى اليوم، نستطيع قراءة جانب من قصة
+            درب زبيدة؛ قصة الإنسان الذي فهم الصحراء،
+            وطوّر حلولاً للبقاء، وترك خلفه إرثاً هندسياً
+            وثقافياً يستحق أن يُروى.
+        </p>
+
+        <br>
+
+        <div class="credit">
+            تجربة رقمية تفاعلية عن درب زبيدة
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   START JOURNEY
+========================= */
+
+function startJourney(){
+
+    const journey = document.getElementById("journey");
+
+    journey.scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+
+/* =========================
+   GENERAL NAVIGATION
+========================= */
+
+function goTo(id){
+
+    document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},
+{
+    threshold:.18
+});
+
+revealElements.forEach(el=>{
+    observer.observe(el);
+});
+
+
+/* =========================
+   ACTIVE NAV DOT
+========================= */
+
+const sections =
+document.querySelectorAll("section");
+
+const navDots =
+document.querySelectorAll(".nav-dot");
+
+const sectionObserver =
+new IntersectionObserver(
+(entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            const index =
+            [...sections].indexOf(entry.target);
+
+            navDots.forEach(dot=>{
+                dot.classList.remove("active");
+            });
+
+            if(navDots[index]){
+                navDots[index].classList.add("active");
+            }
+
+        }
+
+    });
+
+},
+{
+    threshold:.55
+});
+
+sections.forEach(section=>{
+    sectionObserver.observe(section);
+});
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+window.addEventListener("scroll",()=>{
+
+    const scrollTop =
+        window.scrollY;
+
+    const documentHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const progress =
+        (scrollTop / documentHeight) * 100;
+
+    document.getElementById("progress")
+        .style.width = progress + "%";
+
+});
+
+
+/* =========================
+   MOUSE PARALLAX
+========================= */
+
+document.addEventListener("mousemove",(e)=>{
+
+    const x =
+        (e.clientX / window.innerWidth - .5) * 10;
+
+    const y =
+        (e.clientY / window.innerHeight - .5) * 10;
+
+    document.querySelectorAll(".pond-card")
+    .forEach(card=>{
+
+        card.style.transform =
+        `rotateY(${x * .45}deg)
+         rotateX(${-y * .25}deg)`;
+
+    });
+
+});
+
+
+/* =========================
+   KEYBOARD NAVIGATION
+========================= */
+
+document.addEventListener("keydown",(e)=>{
+
+    const current =
+        [...sections].findIndex(section=>{
+
+            const rect =
+            section.getBoundingClientRect();
+
+            return rect.top >= -100 &&
+                   rect.top < window.innerHeight / 2;
+
+        });
+
+    if(e.key === "ArrowDown"){
+
+        const next =
+        Math.min(current + 1, sections.length - 1);
+
+        sections[next].scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+    if(e.key === "ArrowUp"){
+
+        const previous =
+        Math.max(current - 1, 0);
+
+        sections[previous].scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
